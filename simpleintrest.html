@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <style type="text/css">
+        h1{
+        text-decoration-line:underline;
+        text-decoration-color: rgb(155, 59, 245);
+        color: rgb(148, 23, 92);
+        background-color: rgb(160, 241, 122);
+        }
+        h1:hover{color: rgb(53, 4, 20);}
+        body{
+        
+        }
+       
+            input{
+                border-color: rgb(219, 179, 204);
+                border-style:double;
+            }
+        button:hover{
+            color: rgb(0, 0, 0);
+            background-color: rgb(49, 209, 169);
+            border-color:rgb(211, 52, 100)
+            
+        }
+        B{
+            color: rgb(139, 0, 97);
+        }
+        h3:hover,h5:hover{
+            color:rgb(22, 75, 9)
+        }
+        table{
+            background-color: rgb(147, 214, 52);
+            color: rgb(207, 30, 30);
+            border-color: rgb(46, 150, 4);
+        }
+        </style>
+        <script>
+           /* var si=0,P,R,T,k;
+            P=parseFloat(prompt("ENTER PRINCIOPLE (P)AMOUNT : "))
+            document.write("PRINCIPLE AMOUNT"+P+"</br>")
+
+            R=parseFloat(prompt("ENTER RATE OF INTREST(R)  : "))
+            document.write("RATE OF INTREST"+R+"</br>")
+
+            T=parseFloat(prompt("ENTER TIME(T) TAKEN  : "))
+            document.write("TIME "+T+"</br>")
+
+            si=P*R*T/100;
+            document.write("simple intrest amount = "+si+"</br>")
+            k=si+P
+            document.write("The total sum of amount  : "+k)
+            //function for perrfoming simple intrest
+           */       
+      
+
+
+
+         function si(){
+         var SI=0,P,R,T,total;
+         P=parseFloat(document.getElementById("first").value);
+         R=parseFloat(document.getElementById("second").value);
+         T=parseFloat(document.getElementById("third").value);
+         if(isNaN(P) || P>100000000000){
+             //document.getElementsByName("a").innerHTML="ENTER CORRECT VALUE";
+                 alert("please enter valid priciple amount")
+             }
+             else if(isNaN(R))
+             {
+                 alert("please enter valid  rate of intrest");
+             }
+             else if(isNaN(T))
+             {
+                 alert("please enter valid time ")
+
+             }
+             else{
+         SI=parseFloat(P*R*T/100);
+         //calculating si amount with innerHTML value by answer
+         document.getElementById("answer").innerHTML="Simple intrest amount = "+SI;
+        // document.write("simple intrest amount : "+SI);
+       //calculating si and principle amount with innerHTML value by answer
+
+        total=SI+P
+        document.getElementById("answer1").innerHTML="Simple intrest incurred in "+T+ " years is "+total; }
+
+
+}
+        </script>
+    </head>
+    <body>
+        <h1><center>Simple Intrest calculater</center></h1><hr>
+
+<B>
+    <!--Entering Principle amount  --> 
+PRINCIPLE AMOUNT (P): 
+<input name="a" id="first" pattern="[0-9]{9}" title="ENTER VALID AMOUNT" placeholder="Enter Principle Amount"> </br></br>
+<!--Entering % RATE --> 
+RATE OF INTREST(I): &emsp;&nbsp;
+<input name="b" id="second" pattern="[0-9]{3}" title="ENTER VALID INTREST" placeholder="Enter % Intrest"></br></br>
+<!--Entering Time T --> 
+TIME (T) :&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<input name="c" id="third" pattern="[0-9]{2}" title="ENTER VALID TIME taken" placeholder="Enter Time"></br></br>
+<button size="20" onclick="si()">calculate</button>
+<h3 id="answer"></h3>
+<h5 id="answer1"></h5>
+<h1>Formula For Simple Intrest : </h1></B></br>
+<table border="4" width="800" height="100">
+<tr>
+<th>
+<h2>
+    Simple Intrest=(P*R*T)/100 </br>
+    P : principle amount </br>
+    R : % Rate of Intrest </br>
+    T : Time </br>
+ </h2>
+</th>
+</tr>
+</table>
+<hr>
+<hr>
+</B>
+    </body>
+</html>
